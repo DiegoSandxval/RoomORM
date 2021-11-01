@@ -15,6 +15,6 @@ import kotlinx.coroutines.flow.Flow
         suspend fun insert(vehicle: Vehicle)
         @Query("DELETE FROM vehicle_table")
         suspend fun deleteAll()
-        @Query("DELETE FROM vehicle_table WHERE id=id")
+        @Query("DELETE FROM vehicle_table WHERE id=:id")
         suspend fun deleteById(id: Int)
     }

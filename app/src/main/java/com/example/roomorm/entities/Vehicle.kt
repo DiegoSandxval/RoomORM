@@ -1,9 +1,9 @@
 package com.example.roomorm.entities
 
 import androidx.room.ColumnInfo
+import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-
 @Entity(tableName = "vehicle_table")
 data class Vehicle(
     @PrimaryKey(autoGenerate = true)
@@ -14,4 +14,6 @@ data class Vehicle(
     val color: String,
     @ColumnInfo(name = "year")
     val year: Int,
+    @Embedded
+    val brand: Brand?
 )

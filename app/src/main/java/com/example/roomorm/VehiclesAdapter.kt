@@ -17,7 +17,7 @@ class VehiclesAdapter(private val list: List<Vehicle>) :
     }
     override fun onBindViewHolder(holder: VehiclesViewHolder, position: Int) {
         with(holder.binding) {
-            tvTitle.text = list[position].name
+            tvTitle.text = "${list[position].brand?.name} ${list[position].name}"
             tvYear.text = list[position].year.toString()
             tvColor.text = list[position].color
         }
